@@ -23,12 +23,12 @@
     <!-- Modelos 3D principales -->
     <!-- ===================== -->
 
-    <a-asset-item id="plano" src="plano.glb"></a-asset-item>
+    <a-asset-item id="suelo" src="suelo.glb"></a-asset-item>
   
   </a-assets>
 
  <a-entity 
-    gltf-model="#lplno"  
+    gltf-model="#suelo"  
     position="0 0 0"  
     rotation="0 0 0"  
     scale="1 1 1">
