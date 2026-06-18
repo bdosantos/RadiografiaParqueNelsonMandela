@@ -17,59 +17,55 @@
   <!-- 1. RECURSOS: MODELOS, IMÁGENES Y VÍDEOS                  -->
   <!-- ========================================================= -->
 
-  <a-assets timeout="5000">
+  <a-assets timeout="10000">
 
-    <!-- ===================== -->
-    <!-- Modelos 3D principales -->
-    <!-- ===================== -->
-
+    <!-- Modelo del suelo o plano del centro -->
     <a-asset-item id="suelo" src="suelo.glb"></a-asset-item>
-  
+
   </a-assets>
 
- <a-entity 
-    gltf-model="#suelo"  
-    position="0 0 0"  
-    rotation="0 0 0"  
-    scale="1 1 1">
-  </a-entity>
+
   <!-- ========================================================= -->
-  <!-- 2. ENTORNO GENERAL: CIELO, LUZ Y MUSEO                   -->
+  <!-- 2. ENTORNO GENERAL: CIELO Y LUCES                        -->
   <!-- ========================================================= -->
 
   <!-- Cielo azul -->
   <a-sky color="#87CEEB"></a-sky>
 
-  <!-- Luz ambiental -->
+  <!-- Luz ambiental general -->
   <a-light 
     type="ambient" 
     color="#FFFFFF" 
     intensity="0.7">
   </a-light>
 
-  <!-- Luz direccional -->
+  <!-- Luz direccional simulando el sol -->
   <a-light 
     type="directional" 
     position="4 8 4" 
     intensity="0.8">
   </a-light>
 
-  <!-- Modelo de mapa -->
+
+  <!-- ========================================================= -->
+  <!-- 3. MODELO PRINCIPAL                                      -->
+  <!-- ========================================================= -->
+
+  <!-- Suelo / mapa del centro -->
   <a-entity 
-    gltf-model="#mapa"  
+    gltf-model="#suelo"  
     position="0 0 0"  
     rotation="0 0 0"  
-    scale="2 2 2">
+    scale="1 1 1">
   </a-entity>
 
 
-  
-
   <!-- ========================================================= -->
-  <!-- 7. CÁMARA DEL VISITANTE                                  -->
+  <!-- 4. CÁMARA DEL VISITANTE                                  -->
   <!-- ========================================================= -->
 
   <a-entity
+    id="camara"
     position="4 3.5 40"
     camera
     look-controls
