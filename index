@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Radiografía Climática del IES Manuela Malasaña</title>
+
+  <!-- Librería A-Frame -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+
+  <!-- ========================================================= -->
+  <!-- 1. RECURSOS: MODELOS, IMÁGENES Y VÍDEOS                  -->
+  <!-- ========================================================= -->
+
+  <a-assets timeout="5000">
+
+    <!-- ===================== -->
+    <!-- Modelos 3D principales -->
+    <!-- ===================== -->
+
+    <a-asset-item id="plano" src="plano.glb"></a-asset-item>
+  
+  </a-assets>
+
+ <a-entity 
+    gltf-model="#lplno"  
+    position="0 0 0"  
+    rotation="0 0 0"  
+    scale="1 1 1">
+  </a-entity>
+  <!-- ========================================================= -->
+  <!-- 2. ENTORNO GENERAL: CIELO, LUZ Y MUSEO                   -->
+  <!-- ========================================================= -->
+
+  <!-- Cielo azul -->
+  <a-sky color="#87CEEB"></a-sky>
+
+  <!-- Luz ambiental -->
+  <a-light 
+    type="ambient" 
+    color="#FFFFFF" 
+    intensity="0.7">
+  </a-light>
+
+  <!-- Luz direccional -->
+  <a-light 
+    type="directional" 
+    position="4 8 4" 
+    intensity="0.8">
+  </a-light>
+
+  <!-- Modelo de mapa -->
+  <a-entity 
+    gltf-model="#mapa"  
+    position="0 0 0"  
+    rotation="0 0 0"  
+    scale="2 2 2">
+  </a-entity>
+
+
+  
+
+  <!-- ========================================================= -->
+  <!-- 7. CÁMARA DEL VISITANTE                                  -->
+  <!-- ========================================================= -->
+
+  <a-entity
+    position="4 3.5 40"
+    camera
+    look-controls
+    wasd-controls>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>
